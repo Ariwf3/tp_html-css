@@ -1,0 +1,337 @@
+/* Définition des polices personnalisées */
+
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('polices/ballpark.eot');
+    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('polices/ballpark.woff') format('woff'),
+         url('polices/ballpark.ttf') format('truetype'),
+         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    background: url('images/fond_jaune.png');
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+    font-size: 1em;
+}
+
+/* conteneur principal */
+#conteneur {
+    margin: 0 auto; 
+    width: 900px;
+}
+
+
+/******************  Partie Haut **************/
+
+/* Header  */
+
+
+header {
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    /* alignement axe principal */
+    justify-content: space-between;
+    /* ordre d'alignement de l'axe secondaire (vertical)
+    */
+    align-items: flex-end; 
+    /* j'applique un separateur en image de fond */
+    background-image: url("images/separateur.png");
+    background-repeat: repeat-x; /* répétition horizontale */
+    background-position: bottom; /* position en bas du bloc */
+}
+
+h1 {
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0;
+    
+}
+
+h1 img {
+    padding-right: 10px; /* écart entre le titre et l'image */
+}
+
+/* paragraphe carnet de voyages */
+#carnet {
+    font-size: 1.1em;
+    position: relative;
+    bottom: 13px;
+    margin: 0;
+}
+
+
+/* Nav */
+
+nav ul {
+    /* j'enlève les puces et rend ma liste horizontale */
+    display: flex;
+    list-style-type: none;
+    
+}
+
+nav ul li {
+    padding: 5px; /* écart entre les éléments "li" */
+    font-size: 1.5em;
+    font-family: "dayrom,serif"
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color:#c0392b;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media all and (max-width: 1024px)
+{
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+    }
+
+    nav li
+    {
+        padding-left: 4px;
+    }
+    
+    nav a
+    {
+        font-size: 1.1em;
+    }
+    
+    nav a:hover
+    {
+        border-bottom: 0;
+    }
+}
+
+
+/* Bloc bannière */
+#banniere 
+{
+    /* bannière en image de fond */
+    background-image: url("images/sanfrancisco.jpg");
+    background-repeat: no-repeat; 
+    width: 100%;
+    margin-top: 15px;
+    height: 200px;
+    border-radius: 10px;
+    
+    
+}
+
+#legende-banniere {
+    display: flex;
+    min-height: 50px;
+    color: #fff;
+    background: rgba(0,0,0,0.6);/* fond noir avec effet transparence */
+    position: relative; /* pour placer la légende dans le bloc et ensuite le bouton en absolute */
+    bottom: -149px;
+    border-radius: 0 0 10 0 px;
+    
+}
+
+#legende-banniere p{
+    padding-left: 6px;
+}
+
+/* style du bouton */
+button {
+    height: 33px;
+    width: 105px;
+    background:rgba(153,0,0,0.8); /* fond rouge avec effet de transparence */
+    border-radius: 7px;
+    color: #fff;
+    position: absolute; /* par rapport à son parent qui est en position relative */
+    bottom: 7px;
+    right: 7px;
+    
+    
+}
+
+
+
+/********************* Fin partie haut *************/
+
+
+
+
+
+/******** Main ***********/
+
+main {
+    height: 495px;
+    display: flex;
+    justify-content: space-between;
+    /* j'applique un separateur en image de fond */
+    background-image: url("images/separateur.png");
+    background-repeat: repeat-x; /* rpétition horizontale */
+    background-position: bottom; /* position en bas du bloc */
+    
+}
+
+article h2 {
+    margin: 0;
+}
+
+img[alt="logo épingle"] {
+    position: relative;
+    top: 10px;
+
+}
+
+article{
+    width: 618px;
+    height: 460px;
+    font-size: 0.9em;
+}
+
+/* bloc aside */
+#fleche-bulle {
+    position: relative;
+    right: 11px;
+    top: 187px;
+}
+aside {
+    height: 451px;
+    width: 248px;
+    margin-top: 27px;
+    color: #fff;
+    border: 1px solid gray;
+    border-radius: 7px;
+    background: #706B64;
+}
+aside h2,aside p:nth-child(1),aside p:nth-child(2){
+    text-align: center;
+}
+
+aside p:nth-child(3), aside p:nth-child(4) 
+{
+    font-size: 0.9em;
+    text-align: justify;
+    padding: 0 15px 0 15px;
+}
+
+
+
+/* liste icones réseaux sociaux */
+#ico-social {
+    display: flex; /* passage des photos en flex pour les avoir à 'horizontale */
+    justify-content: space-around;
+    list-style-type: none; /* je retire les puces */
+    padding: 0; /* je retire la marge intérieure par défaut */
+    padding-top: 6px;
+}
+
+
+/***********  fin Main *************/
+
+
+
+
+
+/********* Partie basse  *************/
+
+/* footer*/
+
+footer {
+    font-size: 0.8em;
+    display: flex;
+    height: 160px;
+    margin-top: 10px;
+    position: relative;
+    
+}
+
+/* Je postionne la fleche du footer  */
+#fleche-footer{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 89%;
+
+}
+
+/* dimension des 3 blocs du footer */
+#tweet, #photos, #amis {
+    width: 300px;
+}
+/********  div id "photos" ***** */
+
+/* je retire les puces de la liste */
+.photos {
+    list-style-type: none;
+    display: flex; /* passage des photos en flex pour les avoir à 'horizontale */
+    padding: 0; /* je retire la marge intérieure par défaut */
+}
+
+/* Boedure et espacement des images */
+.photos img {
+    border: 1px solid lightslategray;
+    margin-right: 2px;
+}
+
+
+
+/****** div id "amis" ******** */
+
+#amis h3{
+    margin-left: 29px;
+}
+.liste-gauche ul, .liste-droite ul {
+    list-style-type: none;
+    list-style-image: url(images/ico_liensexterne.png); /* je remplace les puces par une image personalisée
+    */
+    
+}
+
+/* Personnalisation des liens */
+.liste-gauche ul li a, .liste-droite ul li a{
+    text-decoration: none;
+    color: #760001;
+}
+
+
+/* Je place les deux blocs de liste face à face */
+.liste-gauche {
+    float: left;
+}
+
+.liste-droite {
+    float: right;
+}
