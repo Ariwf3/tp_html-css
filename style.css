@@ -42,7 +42,6 @@ body
     width: 900px;
 }
 
-
 /******************  Partie Haut **************/
 
 /* Header  */
@@ -111,34 +110,6 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-@media all and (max-width: 1024px)
-{
-    nav
-    {
-        width: auto;
-        text-align: left;
-    }
-    
-    nav ul
-    {
-        flex-direction: column;
-    }
-
-    nav li
-    {
-        padding-left: 4px;
-    }
-    
-    nav a
-    {
-        font-size: 1.1em;
-    }
-    
-    nav a:hover
-    {
-        border-bottom: 0;
-    }
-}
 
 
 /* Bloc bannière */
@@ -162,7 +133,7 @@ nav ul li a:hover {
     background: rgba(0,0,0,0.6);/* fond noir avec effet transparence */
     position: relative; /* pour placer la légende dans le bloc et ensuite le bouton en absolute */
     bottom: -149px;
-    border-radius: 0 0 10 0 px;
+    border-radius: 0 0 10px 0 ;
     
 }
 
@@ -257,8 +228,6 @@ aside p:nth-child(3), aside p:nth-child(4)
     padding: 0; /* je retire la marge intérieure par défaut */
     padding-top: 6px;
 }
-
-
 /***********  fin Main *************/
 
 
